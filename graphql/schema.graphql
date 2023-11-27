@@ -1,0 +1,47 @@
+interface IPokemon {
+    name: String!
+}
+
+type PokemonBasic implements IPokemon {
+    name: String!
+    url: String!
+}
+
+type PokemonType {
+    type: PokemonBasic
+    slot: Int
+}
+
+type PokemonAbility {
+    ability: PokemonBasic
+    is_hidden: Boolean
+    slot: Int
+}
+
+type PokemonSprite {
+    back_default: String
+    back_shiny: String
+    back_female: String
+    back_shiny_female: String
+    front_default: String
+    front_shiny: String
+    front_female: String
+    front_shiny_female: String
+}
+
+type Pokemon implements IPokemon {
+    name: String!
+    id: ID
+    weight: Int
+    height: Int
+    species: PokemonBasic
+    base_experience: Int
+    abilities: [PokemonAbility]
+    types: [PokemonType]
+    sprites: PokemonSprite
+}
+
+type Query {
+    getAllPokemons(offset: Int, limit: Int, searchField: String, sortOrder: String): [PokemonBasic]
+    getPokemonById(id: ID): Pokemon
+}
