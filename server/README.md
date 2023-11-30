@@ -1,8 +1,8 @@
-# Pokemon App (GraphQL + Node.js)
+# Pokemon Server (GraphQL + Node.js)
 
 ## Installation
 
-Use the node package manager to install Pokemon App.
+Use the node package manager to install packages for Pokemon server.
 
 ```bash
 npm install
@@ -14,8 +14,7 @@ In the project directory, you can run:
 
 ### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:4000/graphql](http://localhost:4000/graphql) to view it in the browser.
+Runs the server in the development mode.\
+Open [http://localhost:4000/graphql](http://localhost:4000/graphql) to view a GraphiQL integrated development environment (IDE) in the browser.
 
-You will see a GraphiQL integrated development environment (IDE).\
-The page will reload if you make edits on server.
+The page will reload if you make edits on the server.
